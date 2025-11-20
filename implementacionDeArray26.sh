@@ -42,7 +42,7 @@ inicializar_con_valores() {
         return 1
     fi
 
-    array=()
+    inicializar
 
     local len="$1"
     local valor="$2"
