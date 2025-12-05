@@ -23,17 +23,20 @@ eliminar_elem () {
         return 1
     fi
     unset "array[${1}]"
-    array=( "${array[@]}" )        
+    array=( "${array[@]}" ) 
+    return 0      
 }
 
 longitud () {
     echo "${#array[@]}"
+    return 0 
 }
 
 imprimir () {
     for elem in "${array[@]}"; do
         echo "${elem}"
     done
+    return 0
 }
 
 inicializar_con_valores() {
@@ -49,4 +52,5 @@ inicializar_con_valores() {
     for (( i=0; i<len; i++ )); do
         array+=( "${valor}" )
     done
+    return 0
 }
